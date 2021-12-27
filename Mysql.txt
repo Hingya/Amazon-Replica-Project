@@ -1,0 +1,32 @@
+CREATE DATABASE Amazon;
+
+USE amazon;
+
+
+CREATE TABLE product(
+Product_id INT,
+Product_Name VARCHAR(50),
+Manufacturer_Name VARCHAR(50),
+Price INT,
+Discount INT,
+Total_stock_available INT,
+primary key(Product_id));
+
+CREATE TABLE user(
+Name VARCHAR(50),
+Email VARCHAR(50),
+username VARCHAR(50),
+password VARCHAR(50),
+Address VARCHAR(50));
+
+
+CREATE TABLE orders(
+order_name VARCHAR(50),
+Name VARCHAR(50),
+product_id INT,
+foreign key(Product_id) REFERENCES product(Product_id));
+
+
+
+
+
